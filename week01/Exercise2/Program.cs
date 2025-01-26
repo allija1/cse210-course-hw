@@ -4,12 +4,13 @@ class Program
 {
     static void Main(string[] args)
     {
+        // core requirements
         Console.Write("What is your grade percentage? ");
         string input = Console.ReadLine();
 
+        // stretch challange
         if (int.TryParse(input, out int percent))
         {
-            
             if (percent < 0 || percent > 100)
             {
                 Console.WriteLine("Please enter a percentage between 0 and 100.");
@@ -43,7 +44,7 @@ class Program
 
             int lastDigit = percent % 10;
 
-            if (letter != "F")
+            if (letter != "F") 
             {
                 if (lastDigit >= 7)
                 {
@@ -55,7 +56,7 @@ class Program
                 }
             }
 
-            // if A+ casses occur 
+            // If A+ casses occur
             if (letter == "A" && sign == "+")
             {
                 sign = "";
